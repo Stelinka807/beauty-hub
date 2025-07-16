@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kosmetický e-shop</title>
+
+  <link rel="stylesheet" href="hlavni-stranka.css">
+</head>
+<body>
+
+<header>
+  <h1>Krása & Péče</h1>
+  <p>Objev svou krásu s našimi produkty</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Skincare</a>
+      <ul>
+        <li><a href="#" onclick="showProducts('akne')">Akné</a></li>
+        <li><a href="#" onclick="showProducts('sucha')">Suchá pleť</a></li>
+        <li><a href="#" onclick="showProducts('mastna')">Mastná pleť</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Make-up</a>
+      <ul>
+        <li><a href="#" onclick="showProducts('bronzery')">Bronzery</a></li>
+        <li><a href="#" onclick="showProducts('rasenky')">Řasenky</a></li>
+        <li><a href="#" onclick="showProducts('makeupy')">Make-upy</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="products">
+
+  <!-- Produkty na akné -->
+  <div class="product category-akne hidden">
+    <h3>Krém na akné - ClearSkin</h3>
+    <p>Cena: 299 Kč</p>
+    <p>Složení: kyselina salicylová, aloe vera</p>
+  </div>
+
+  <div class="product category-akne hidden">
+    <h3>Gel na akné - DermActive</h3>
+    <p>Cena: 249 Kč</p>
+    <p>Složení: tea tree, niacinamide</p>
+  </div>
+
+  <!-- Bronzery -->
+  <div class="product category-bronzery hidden">
+    <h3>Bronzer SunKiss</h3>
+    <p>Cena: 399 Kč</p>
+    <p>Složení: minerální pigmenty, vitamín E</p>
+  </div>
+
+  <!-- Řasenky -->
+  <div class="product category-rasenky hidden">
+    <h3>Řasenka VolumeLash</h3>
+    <p>Cena: 199 Kč</p>
+    <p>Složení: keratin, ricinový olej</p>
+  </div>
+
+  <!-- Suchá pleť -->
+  <div class="product category-sucha hidden">
+    <h3>Hydratační krém SoftSkin</h3>
+    <p>Cena: 350 Kč</p>
+    <p>Složení: kyselina hyaluronová, bambucké máslo</p>
+  </div>
+
+  <!-- Mastná pleť -->
+  <div class="product category-mastna hidden">
+    <h3>Zmatňující gel OilFree</h3>
+    <p>Cena: 289 Kč</p>
+    <p>Složení: zelený čaj, kaolin</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Krása & Péče | Všechna práva vyhrazena</p>
+</footer>
+
+<script>
+  function showProducts(category) {
+    const all = document.querySelectorAll('.product');
+    all.forEach(prod => prod.classList.add('hidden'));
+
+    const visible = document.querySelectorAll('.category-' + category);
+    visible.forEach(prod => prod.classList.remove('hidden'));
+  }
+</script>
+
+</body>
+</html>

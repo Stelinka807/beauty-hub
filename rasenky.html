@@ -93,7 +93,7 @@
   <p class="brand-title" onclick="toggleProducts('essence')">Essence</p>
   <div class="product-list" id="essence">
     <div class="product">
-      <img src="https://i5.walmartimages.com/asr/01d9f588-185e-4af0-9614-a3732d29d401_1.2f477ebfcdf73189f7f24337a024ee1f.jpeg" alt="Essence Lash Princess">
+      <img src="https://i5.walmartimages.com/asr/01d9f588-185e-4af0-9614-a3732d29d401_1.2f477ebfcdf73189f7f24337a024ee1f.jpeg" alt="Essence Lash Princess" style="height: 300px;width: auto;">
       <div>
         <p>Essence Lash Princess</p>
         <p>Cena: 99 Kč</p>
@@ -158,7 +158,30 @@
 
 
 
-<!--pod toto uz nepis-->
+<script>
+  document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const productDiv = this.closest('.product');
+      const img = productDiv.querySelector('img').src;
+      const name = productDiv.querySelector('p').textContent;
+      const price = productDiv.querySelectorAll('p')[1].textContent;
+
+      const product = {
+        img: img,
+        name: name,
+        price: price
+      };
+
+      // Uložíme produkt do localStorage
+      let kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+      kosik.push(product);
+      localStorage.setItem('kosik', JSON.stringify(kosik));
+
+      // Přesměrování na stránku kosik.html
+      window.location.href = "kosik.html";
+    });
+  });
+</script>
     
 </body>
 </html>

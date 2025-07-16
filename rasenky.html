@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kosmetický e-shop</title>
+
+  <link rel="stylesheet" href="hlavni-stranka.css">
+</head>
+<body>
+
+<header>
+  <h1>Krása & Péče</h1>
+  <p>Objev svou krásu s našimi produkty</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Skincare</a>
+      <ul>
+        <li><a href="akne.html">Akné</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Make-up</a>
+      <ul>
+        <li><a href="rasenky.html">Řasenky</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<h1>Řasenky</h1>
+
+
+<!--pod toto pis-->
+<div class="brand-section">
+  <p class="brand-title" onclick="toggleProducts('maybelline')">Maybelline</p>
+  <div class="product-list" id="maybelline">
+    <div class="product">
+      <img src="https://www.parfemy-elnino.cz/data/cache/thumb_min500_max1000-min500_max1000-12/products/296097/1539335171/maybelline-lash-sensational-full-fun-effect-rasenka-pro-zeny-9-4-ml-odstin-brown-251193.jpg" alt="Maybelline Lash Sensational">
+
+      <div>
+        <p>Maybelline Lash Sensational</p>
+        <p>Cena: 219 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+    <div class="product">
+    <img src="https://www.ejollify.com/wp-content/uploads/2021/07/Maybelline-Volum-Express-The-Colossal-Waterproof-Mascara.jpg" alt="Maybelline Colossal Volum' Express">
+
+      <div>
+        <p>Maybelline Colossal Volum' Express</p>
+        <p>Cena: 199 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brand-section">
+  <p class="brand-title" onclick="toggleProducts('loreal')">L'Oréal</p>
+  <div class="product-list" id="loreal">
+    <div class="product">
+      <img src="https://i5.walmartimages.com/asr/db0525bf-e18d-4f6a-9cd5-c7881726ce36_1.a80a0110b5149c29f8f4830cbe2166cf.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff" alt="L'Oréal Volume Million Lashes">
+     <div>
+        <p>L'Oréal Volume Million Lashes</p>
+        <p>Cena: 249 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+    <div class="product">
+     <img src="https://scale.coolshop-cdn.com/product-media.coolshop-cdn.com/234D9C/190e8261fe134abe92ef14aad3236aec.jpg/f/loreal-paradise-extatic-mascara-intense-black.jpg" alt="L'Oréal Paradise Extatic">
+     <div>
+        <p>L'Oréal Paradise Extatic</p>
+        <p>Cena: 269 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brand-section">
+  <p class="brand-title" onclick="toggleProducts('essence')">Essence</p>
+  <div class="product-list" id="essence">
+    <div class="product">
+      <img src="https://i5.walmartimages.com/asr/01d9f588-185e-4af0-9614-a3732d29d401_1.2f477ebfcdf73189f7f24337a024ee1f.jpeg" alt="Essence Lash Princess" style="height: 300px;width: auto;">
+      <div>
+        <p>Essence Lash Princess</p>
+        <p>Cena: 99 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://media.douglas.de/737854/900_0/Essence-I_Love-I_Love_Extreme_Crazy_Volume_Mascara.jpg" alt="Essence I Love Extreme">
+      <div>
+        <p>Essence I Love Extreme</p>
+        <p>Cena: 89 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brand-section">
+  <p class="brand-title" onclick="toggleProducts('maxfactor')">Max Factor</p>
+  <div class="product-list" id="maxfactor">
+    <div class="product">
+      <img src="https://images.contentstack.io/v3/assets/blteb3182258f055636/bltc4e1a372d5c0cb6d/5dc01673a85dd3382954ecb9/Max-Factor_Base-Business_2000-Calorie_Packshot_Closed_LowRes_CMYK_(2).png?auto=webp" alt="Max Factor 2000 Calorie">
+      <div>
+        <p>Max Factor 2000 Calorie</p>
+        <p>Cena: 189 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://www.bigw.com.au/medias/sys_master/images/images/he3/h4c/11804040396830.jpg" alt="Max Factor Masterpiece">
+      <div>
+        <p>Max Factor Masterpiece</p>
+        <p>Cena: 209 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brand-section">
+  <p class="brand-title" onclick="toggleProducts('nyx')">NYX</p>
+  <div class="product-list" id="nyx">
+    <div class="product">
+      <img src="https://th.bing.com/th/id/OIP.adpSfteP-aKJR0eoq-Sr2gHaHa?w=177&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Popis obrázku">
+      <div>
+        <p>NYX Worth the Hype</p>
+        <p>Cena: 179 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="https://i1.perfumesclub.com/grande/124853.jpg" alt="NYX On the Rise Volume">
+      <div>
+        <p>NYX On the Rise Volume</p>
+        <p>Cena: 199 Kč</p>
+        <button class="buy-button">Koupit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+  document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const productDiv = this.closest('.product');
+      const img = productDiv.querySelector('img').src;
+      const name = productDiv.querySelector('p').textContent;
+      const price = productDiv.querySelectorAll('p')[1].textContent;
+
+      const product = {
+        img: img,
+        name: name,
+        price: price
+      };
+
+      // Uložíme produkt do localStorage
+      let kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+      kosik.push(product);
+      localStorage.setItem('kosik', JSON.stringify(kosik));
+
+      // Přesměrování na stránku kosik.html
+      window.location.href = "kosik.html";
+    });
+  });
+</script>
+    
+</body>
+</html>

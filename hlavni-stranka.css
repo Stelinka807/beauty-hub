@@ -143,4 +143,38 @@
     .product h3 {
       margin: 10px 0;
     }
-    
+
+
+    .product-list {
+  display: flex;
+  flex-wrap: nowrap; /* zamezí zalomení do dalšího řádku */
+  overflow-x: auto;   /* přidá horizontální scroll, pokud je moc produktů */
+  gap: 20px;          /* mezery mezi produkty */
+  padding: 10px 0;
+}
+
+  .buy-button {
+    background: linear-gradient(135deg, #7B2FF7, #FFFFFF); /* fialová do bílé */
+    color: #7B2FF7; /* fialový text */
+    border: 2px solid #7B2FF7; /* fialový okraj */
+    padding: 10px 25px;
+    margin-top: 8px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .buy-button:hover {
+    background: linear-gradient(135deg, #FFFFFF, #7B2FF7); /* při hover obráceně */
+    color: white;
+    border-color: white;
+  }
+  .product > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product > img {
+   width: 100%;
+   height: auto; 
+  }

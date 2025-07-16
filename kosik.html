@@ -32,10 +32,32 @@
 </nav>
 
 
-<!--Mezi toto pokracuj-->
+<!--tady nize pracuj-->
+<div id="kosik">
+
+</div>
+
+<script>
+  const kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+
+  const kosikDiv = document.getElementById('kosik');
+
+  kosik.forEach(product => {
+    const productEl = document.createElement('div');
+    productEl.classList.add('product');
+
+    productEl.innerHTML = `
+      <img src="${product.img}" alt="${product.name}" style="width:150px;">
+      <p>${product.name}</p>
+      <p>${product.price}</p>
+    `;
+
+    kosikDiv.appendChild(productEl);
+  });
+</script>
 
 
-<!--tady konec-->
+<!--pod timto uz nepracuj-->
 <footer>
   <p>&copy; 2025 Krása & Péče | Všechna práva vyhrazena</p>
 </footer>

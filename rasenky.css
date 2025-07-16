@@ -1,0 +1,210 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff0ff;
+  color: #333;
+}
+
+header {
+  background-color: #8e44ad;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f0e6f6;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  position: relative;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #8e44ad;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav ul ul li {
+  margin: 0;
+  width: 100%;
+}
+
+nav ul ul li a {
+  padding: 10px 15px;
+  color: #4b0082;
+  white-space: nowrap;
+}
+
+nav ul ul li a:hover {
+  background-color: #f7e4ff;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.product img{
+  width: 100px;
+  height: 100px;
+}
+
+.product h3 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #8e44ad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+    .hidden {
+      display: none;
+    }
+        body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f0ff;
+      color: #4b0082;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 30px;
+      color: #800080;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .category {
+      width: 160px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .category:hover {
+      transform: scale(1.05);
+    }
+
+    .category img {
+      width: 100%;
+      border-radius: 50%;
+      border: 4px solid #d8b4f8;
+    }
+
+    .category p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #6a0dad;
+    }
+
+    .products {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .product {
+      background-color: #ffffff;
+      border: 2px solid #dda0dd;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 10px auto;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product h3 {
+      margin: 10px 0;
+    }
+
+
+    .product-list {
+  display: flex;
+  flex-wrap: nowrap; /* zamezí zalomení do dalšího řádku */
+  overflow-x: auto;   /* přidá horizontální scroll, pokud je moc produktů */
+  gap: 20px;          /* mezery mezi produkty */
+  padding: 10px 0;
+}
+
+  .buy-button {
+    background: linear-gradient(135deg, #7B2FF7, #FFFFFF); /* fialová do bílé */
+    color: #7B2FF7; /* fialový text */
+    border: 2px solid #7B2FF7; /* fialový okraj */
+    padding: 10px 25px;
+    margin-top: 8px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .buy-button:hover {
+    background: linear-gradient(135deg, #FFFFFF, #7B2FF7); /* při hover obráceně */
+    color: white;
+    border-color: white;
+  }
+  .product > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product > img {
+   width: 100%;
+   height: auto; 
+  }
+
+.hidden {
+  display: none;
+}

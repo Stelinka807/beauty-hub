@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0cafa; /* from second file */
+  background-color: #fff0ff; /* from second file */
   color: #333;               /* from second file */
 }
 
@@ -10,8 +10,9 @@ body {
 }
 
 header {
-  background-color: #e009ec; /* from second file */
-  color: rgb(74, 16, 94);              /* from second file */
+  background-color: #8e44ad
+  ; /* from second file */
+  color: rgb(226, 188, 239);              /* from second file */
   padding: 20px;             /* from second file */
   text-align: center;
 }
@@ -53,12 +54,7 @@ nav li {
 nav li {
   position: relative;
   margin: 0 15px;
-}
 
-nav a {
-  text-decoration: none;
-  color: #ea00ff;
-  font-weight: bold;
 }
 
 nav ul ul {
@@ -66,7 +62,8 @@ nav ul ul {
   position: absolute;
   top: 30px;
   background-color: #fff;
-  border: 1px solid #ff0000;
+  border: 1px solid #dda0dd
+  ;
   padding: 10px;
 }
 
@@ -140,13 +137,7 @@ main {
   margin-top: 0;
 }
 
-footer {
-  background-color: #ea00ff; /* from second file */
-  color: white;              /* from second file */
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
+
 
 .hidden {
   display: none;

@@ -88,6 +88,11 @@ nav li:hover > ul {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
+.product img{
+  width: 100px;
+  height: 100px;
+}
+
 .product h3 {
   margin-top: 0;
 }

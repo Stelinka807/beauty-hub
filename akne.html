@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,24 +34,8 @@
 
 
 <h1>akne stranka</h1>
-<tady pis>
-    <!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produkty pro akné – Krása & Péče</title>
-</head>
-<body>
 
-<header>
-  <h1>Krása & Péče</h1>
-  <p>Produkty pro péči o pleť s akné</p>
-</header>
 
-<nav>
-  <a href="akne.html" style="text-decoration: underline;">Akné</a>
-</nav>
 
 <section class="products">
 
@@ -59,7 +43,7 @@
     <img src="obrazky/serumm.png" alt="Sérum" />
     <h3>Sérum proti akné</h3>
     <p>Lehké sérum s obsahem kyseliny salicylové, které pomáhá redukovat pupínky a zklidňuje podrážděnou pleť.</p>
-    <div class="price">399 Kč</div>
+    <p class="price">399 Kč</p>
     <button class="buy-button">Koupit</button>
   </article>
 
@@ -67,15 +51,15 @@
     <img src="obrazky/krem.png" alt="Krém" />
     <h3>Hydratační krém</h3>
     <p>Výživný krém, který hydratuje pleť bez ucpávání pórů a podporuje hojení akné.</p>
-    <div class="price">349 Kč</div>
+    <p class="price">349 Kč</p>
     <button class="buy-button">Koupit</button>
   </article>
 
   <article class="product">
     <img src="obrazky/masticka.png" alt="Mastika" />
-    <h3>Mastika pro citlivou pleť</h3>
-    <p>Přírodní mastika s antiseptickými účinky, vhodná pro citlivou a problematickou pleť s akné.</p>
-    <div class="price">299 Kč</div>
+    <h3>Mastička pro citlivou pleť</h3>
+    <p>Přírodní mastička s antiseptickými účinky, vhodná pro citlivou a problematickou pleť s akné.</p>
+    <p class="price">299 Kč</p>
     <button class="buy-button">Koupit</button>
   </article>
 
@@ -83,7 +67,7 @@
     <img src="./obrazky/serum.png" alt="Čisticí gel" />
     <h3>Čisticí gel na akné</h3>
     <p>Jemný čisticí gel, který odstraňuje nečistoty a přebytečný maz, aniž by pleť vysušoval.</p>
-    <div class="price">279 Kč</div>
+    <p class="price">279 Kč</p>
     <button class="buy-button">Koupit</button>
   </article>
 
@@ -93,12 +77,32 @@
   &copy; 2025 Krása & Péče - Všechna práva vyhrazena
 </footer>
 
+<script>
+  document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const productDiv = this.closest('.product');
+      const img = productDiv.querySelector('img').src;
+      const name = productDiv.querySelector('p').textContent;
+      const price = productDiv.querySelectorAll('p')[1].textContent;
+
+      const product = {
+        img: img,
+        name: name,
+        price: price
+      };
+
+      // Uložíme produkt do localStorage
+      let kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+      kosik.push(product);
+      localStorage.setItem('kosik', JSON.stringify(kosik));
+
+      // Přesměrování na stránku kosik.html
+      window.location.href = "kosik.html";
+    });
+  });
+</script>
 </body>
 </html>
 
 
 
-
-<--sem uz ne>
-</body>
-</html>

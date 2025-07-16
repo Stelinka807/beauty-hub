@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="akne.css">
+</head>
+<body>
+    <header>
+  <h1>Krása & Péče</h1>
+  <p>Objev svou krásu s našimi produkty</p>
+</header>
+
+
+<nav>
+  <ul>
+    <li>
+      <a href="#">Skincare</a>
+      <ul>
+        <li><a href="akne.html">Akné</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">Make-up</a>
+      <ul>
+        <li><a href="rasenky.html">Řasenky</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<h1>akne stranka</h1>
+
+
+
+<section class="products">
+
+  <article class="product">
+    <img src="obrazky/serumm.png" alt="Sérum" />
+    <h3>Sérum proti akné</h3>
+    <p>Lehké sérum s obsahem kyseliny salicylové, které pomáhá redukovat pupínky a zklidňuje podrážděnou pleť.</p>
+    <p class="price">399 Kč</p>
+    <button class="buy-button">Koupit</button>
+  </article>
+
+  <article class="product">
+    <img src="obrazky/krem.png" alt="Krém" />
+    <h3>Hydratační krém</h3>
+    <p>Výživný krém, který hydratuje pleť bez ucpávání pórů a podporuje hojení akné.</p>
+    <p class="price">349 Kč</p>
+    <button class="buy-button">Koupit</button>
+  </article>
+
+  <article class="product">
+    <img src="obrazky/masticka.png" alt="Mastika" />
+    <h3>Mastička pro citlivou pleť</h3>
+    <p>Přírodní mastička s antiseptickými účinky, vhodná pro citlivou a problematickou pleť s akné.</p>
+    <p class="price">299 Kč</p>
+    <button class="buy-button">Koupit</button>
+  </article>
+
+  <article class="product">
+    <img src="./obrazky/serum.png" alt="Čisticí gel" />
+    <h3>Čisticí gel na akné</h3>
+    <p>Jemný čisticí gel, který odstraňuje nečistoty a přebytečný maz, aniž by pleť vysušoval.</p>
+    <p class="price">279 Kč</p>
+    <button class="buy-button">Koupit</button>
+  </article>
+
+</section>
+
+<footer>
+  &copy; 2025 Krása & Péče - Všechna práva vyhrazena
+</footer>
+
+<script>
+  document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const productDiv = this.closest('.product');
+      const img = productDiv.querySelector('img').src;
+      const name = productDiv.querySelector('p').textContent;
+      const price = productDiv.querySelectorAll('p')[1].textContent;
+
+      const product = {
+        img: img,
+        name: name,
+        price: price
+      };
+
+      // Uložíme produkt do localStorage
+      let kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+      kosik.push(product);
+      localStorage.setItem('kosik', JSON.stringify(kosik));
+
+      // Přesměrování na stránku kosik.html
+      window.location.href = "kosik.html";
+    });
+  });
+</script>
+</body>
+</html>
+
+
+

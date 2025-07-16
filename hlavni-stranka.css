@@ -39,7 +39,17 @@ nav ul {
   padding: 0;
   display: flex;
 }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
+nav li {
+  position: relative;
+  margin: 0 15px;
+}
 nav li {
   position: relative;
   margin: 0 15px;
@@ -106,6 +116,12 @@ main {
   justify-content: center;
   padding: 20px;
 }
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
 
 .product {
   border: 1px solid #ddd;
@@ -117,6 +133,9 @@ main {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
+.product h3 {
+  margin-top: 0;
+}
 .product h3 {
   margin-top: 0;
 }

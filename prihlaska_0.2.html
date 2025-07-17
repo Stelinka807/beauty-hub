@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kosmetický e-shop</title>
+
+ 
+  
+  <link rel="stylesheet" href="rasenky.css">
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Přihláška – Krása & Péče</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff0ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #8e44ad;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: white;
+      border: 2px solid #dda0dd;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #6a0dad;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #6a0dad;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .submit-button {
+      background-color: #8e44ad;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #732d91;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    footer {
+      background-color: #8e44ad;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      display: none;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Přihláška</h1>
+  <p>Vyplň formulář pro účast v programu péče o pleť</p>
+</header>
+
+<form id="applicationForm">
+  <h2>Přihlašovací formulář</h2>
+
+  <div class="success-message" id="success">Děkujeme! Přihláška byla úspěšně odeslána.</div>
+
+  <label for="fullname">Jméno a příjmení</label>
+  <input type="text" id="fullname" name="fullname" required />
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required />
+
+  <label for="phone">Telefon</label>
+  <input type="tel" id="phone" name="phone" required />
+
+  <label for="product">Zájem o:</label>
+  <select id="product" name="product" required>
+    <option value="">-- Vyber možnost --</option>
+    <option value="serum">Sérum proti akné</option>
+    <option value="krem">Denní krém</option>
+    <option value="mastika">Bylinná mastika</option>
+    <option value="konzultace">Individuální konzultace</option>
+  </select>
+
+  <label for="password">Zvol si heslo</label>
+  <input type="password" id="password" name="password" required />
+
+  <label for="confirm-password">Potvrď heslo</label>
+  <input type="password" id="confirm-password" name="confirm-password" required />
+  <p class="error" id="password-error">Hesla se neshodují.</p>
+
+  <label for="message">Poznámka (nepovinné)</label>
+  <textarea id="message" name="message" rows="4"></textarea>
+
+  <button type="submit" class="submit-button">Odeslat přihlášku</button>
+</form>
+
+<footer>
+  &copy; 2025 Krása & Péče
+</footer>
+
+<script>
+  const form = document.getElementById('applicationForm');
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirm-password');
+  const errorMsg = document.getElementById('password-error');
+  const successMsg = document.getElementById('success');
+
+  form.addEventListener('submit', function (e) {
+    if (password.value !== confirmPassword.value) {
+      e.preventDefault();
+      errorMsg.style.display = 'block';
+      successMsg.style.display = 'none';
+    } else {
+      errorMsg.style.display = 'none';
+      successMsg.style.display = 'block';
+      e.preventDefault(); // zastavíme reálné odeslání (jen ukázka)
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>
+
+   

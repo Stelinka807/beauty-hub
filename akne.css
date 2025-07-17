@@ -10,6 +10,7 @@ header {
   color: white;
   padding: 30px; /* větší padding z druhého */
   text-align: center;
+  font-size: 30px;
 }
 
 nav {
@@ -122,10 +123,10 @@ nav li:hover > ul {
 }
 
 .product p {
-  color: #555;
+  color: #4b0082;
   margin: 5px 0;
   flex-grow: 1;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .price {

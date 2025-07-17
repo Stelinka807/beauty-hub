@@ -35,7 +35,7 @@
 
 
   <!--tady nize pracuj-->
-  <div id="kosik">
+  <div id="kosik" class="kosik">
 
   </div>
 
@@ -55,7 +55,7 @@
       <img src="${product.img}" alt="${product.name}" style="width:150px;">
       <p>${product.name}</p>
       <p>${product.price}</p>
-      <button onclick="removeParent(this)">Odebrat</button>
+      <button onclick="removeParent(this); delete kosik[product]">Odebrat</button>
     `;
 
       kosikDiv.appendChild(productEl);

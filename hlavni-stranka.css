@@ -137,7 +137,11 @@ main {
   margin-top: 0;
 }
 
-
+.kosik {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 .hidden {
   display: none;

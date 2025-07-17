@@ -150,3 +150,7 @@ main {
 .hidden {
   display: none;
 }
+
+footer {
+  color: #fff;
+}

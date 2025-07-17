@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,61 +8,67 @@
 
   <link rel="stylesheet" href="hlavni-stranka.css">
 </head>
+
 <body>
 
-<header>
-  <h1>Krása & Péče</h1>
-  <p>Objev svou krásu s našimi produkty</p>
-</header>
+  <header>
+    <h1>Krása & Péče</h1>
+    <p>Objev svou krásu s našimi produkty</p>
+  </header>
 
 
-<nav>
-  <ul>
-    <li><a href="#">Skincare</a>
-      <ul>
-        <li><a href="akne.html">Akné</a></li>
-      </ul>
-    </li>
+  <nav>
+    <ul>
+      <li><a href="#">Skincare</a>
+        <ul>
+          <li><a href="akne.html">Akné</a></li>
+        </ul>
+      </li>
 
-    <li><a href="#">Make-up</a>
-      <ul>
-        <li><a href="rasenky.html">Řasenky</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+      <li><a href="#">Make-up</a>
+        <ul>
+          <li><a href="rasenky.html">Řasenky</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 
-<!--tady nize pracuj-->
-<div id="kosik">
+  <!--tady nize pracuj-->
+  <div id="kosik">
 
-</div>
+  </div>
 
-<script>
-  const kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+  <script>
+    const kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+    function removeParent(button) {
+      const parent = button.parentNode; // Get the parent node of the button
+      parent.remove(); // Remove the parent node
+    }
+    const kosikDiv = document.getElementById('kosik');
 
-  const kosikDiv = document.getElementById('kosik');
+    kosik.forEach(product => {
+      const productEl = document.createElement('div');
+      productEl.classList.add('product');
 
-  kosik.forEach(product => {
-    const productEl = document.createElement('div');
-    productEl.classList.add('product');
-
-    productEl.innerHTML = `
+      productEl.innerHTML = `
       <img src="${product.img}" alt="${product.name}" style="width:150px;">
       <p>${product.name}</p>
       <p>${product.price}</p>
+      <button onclick="removeParent(this)">Odebrat</button>
     `;
 
-    kosikDiv.appendChild(productEl);
-  });
-</script>
+      kosikDiv.appendChild(productEl);
+    });
+  </script>
 
 
-<!--pod timto uz nepracuj-->
-<footer>
-  <p>&copy; 2025 Krása & Péče | Všechna práva vyhrazena</p>
-</footer>
+  <!--pod timto uz nepracuj-->
+  <footer>
+    <p>&copy; 2025 Krása & Péče | Všechna práva vyhrazena</p>
+  </footer>
 
 
 </body>
+
 </html>

@@ -17,6 +17,10 @@ header {
   text-align: center;
 }
 
+    .specialni-nadpis {
+  font-family: 'Michroma', sans-serif;
+}
+
 header h1 {
   margin: 0;
   font-size: 100px;

@@ -1,0 +1,32 @@
+<script>
+  const kosik = JSON.parse(localStorage.getItem('kosik')) || [];
+  const kosikDiv = document.getElementById('kosik');
+
+  function aktualizovatKosik() {
+    kosikDiv.innerHTML = ''; // Vyčistí obsah
+    kosik.forEach((product, index) => {
+      const productEl = document.createElement('div');
+      productEl.classList.add('product');
+      productEl.style.marginBottom = '20px';
+
+      productEl.innerHTML = `
+        <img src="${product.img}" alt="${product.name}" style="width:150px;">
+        <p>${product.name}</p>
+        <p>${product.price}</p>
+        <button class="remove-button" onclick="odebratZKosiku(${index})">Odebrat</button>
+      `;
+
+      kosikDiv.appendChild(productEl);
+    });
+  }
+
+  function odebratZKosiku(index) {
+    kosik.splice(index, 1); // Odebere produkt podle indexu
+    localStorage.setItem('kosik', JSON.stringify(kosik)); // Uloží zpět
+    aktualizovatKosik(); // Aktualizuje zobrazení
+  }
+
+  aktualizovatKosik(); // První načtení
+</script>
+
+

@@ -108,18 +108,28 @@ footer {
     .hidden {
       display: none;
     }
+
+    .specialni-nadpis h1 {
+  font-family: 'Michroma', sans-serif;
+}
+
         body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f0ff;
-      color: #4b0082;
+      color: #4b0082; /* 4b0082 */
+
       margin: 0;
       padding: 0;
       text-align: center;
     }
     h1 {
       margin-top: 30px;
-      color: #800080;
+      color: #fff;
     }
+
+    .rasenky-nadpis {
+      font-size: 50px;
+      color: #8e44ad;    } /* nadpis rasenky */
 
     .categories {
       display: flex;
@@ -180,20 +190,22 @@ footer {
 }
 
   .buy-button {
-    background: linear-gradient(135deg, #7B2FF7, #FFFFFF); /* fialová do bílé */
-    color: #7B2FF7; /* fialový text */
-    border: 2px solid #7B2FF7; /* fialový okraj */
+    background: linear-gradient(135deg, #d8b4f8, #d8b4f8); /* fialová do bílé */
+    color: #000000; /* fialový text */
+    border: 2px solid #8e44ad; /* fialový okraj */
     padding: 10px 25px;
     margin-top: 8px;
     font-weight: bold;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* toto je spravne do kosiku */
   }
   .buy-button:hover {
-    background: linear-gradient(135deg, #FFFFFF, #7B2FF7); /* při hover obráceně */
-    color: white;
-    border-color: white;
+    background: linear-gradient(135deg, #8e44ad, #8e44ad); 
+    .specialni-nadpis h1 {
+  font-family: 'Michroma', sans-serif;    /* tento je spravne koupit po najeti mysi */
+    }color: white;
+    border-color: white; 
   }
   .product > div {
     display: flex;
